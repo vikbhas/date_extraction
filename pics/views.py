@@ -65,7 +65,7 @@ def extract_date(request):
         #import datefinder
         import dateutil.parser as dparser
         l = []
-        for i in file_text.splitlines():
+        for i in file_text.split("\n"):
             try:
                 #matches = list(datefinder.find_dates(i))
                 matches=dparser.parse(i,fuzzy=True)
